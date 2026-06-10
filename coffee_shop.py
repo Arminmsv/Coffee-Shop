@@ -32,7 +32,11 @@ while more in ["yes" , "y"]:
                 total_price += counter_order * price
     if not found:
         print(" Sorry we dont have this item!")
+
     more = input(" Anything else? (yes/no): ").strip().lower()
+    while more not in ["yes" , "y" , "no" , "n"]:
+        print(" Invalid input! Please enter yes or no")
+        more = input(" Anything else? (yes/no): ").strip().lower()
 
 print(f" you have to pay: {total_price:,}")
 print(" Your order has been registered successfully ✅")
